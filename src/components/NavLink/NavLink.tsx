@@ -1,44 +1,42 @@
-import React from 'react'
-import styled from 'styled-components'
-
-
+import React from 'react';
+import styled from 'styled-components';
 
 interface Props {
-    icon?: JSX.Element;
-    text: string;
-
+  text: string;
+  icon?: JSX.Element;
 }
 
-export const NavLink = ({ icon, text }: Props) => {
-    return (
-        <Styled.Container >
-            <Styled.Iconwrapper>{icon}</Styled.Iconwrapper>
-            <Styled.TextWrapper>{text}</Styled.TextWrapper>
-        </Styled.Container>
-
-    )
-}
+export const NavLink = ({icon, text}: Props) => {
+  return (
+    <Styled.Container>
+      <Styled.IconWrapper>{icon}</Styled.IconWrapper>
+      <Styled.TextWrapper>{text}</Styled.TextWrapper>
+    </Styled.Container>
+  );
+};
 
 const Styled = {
-    Container: styled.div`
-    display:flex;
-    flex-direction:row;
-    align-items:center;
-    justify-content:flex-start;
-    height:50px;
-    margin-bottom:10px;
-   `,
-    Iconwrapper: styled.div`
-    display:flex;
+  Container: styled.div`
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+    height: 50px;
+    margin-bottom: 10px;
+  `,
+  IconWrapper: styled.div`
+    display: flex;
+    height: 50px;
     flex: 1;
-    height:50px;
-   `,
-    TextWrapper: styled.div`
-    display:flex;
-    align-items:center;
-    justify-content:flex-start;
-    padding-left:10px;
-    flex:4;
-    height:50px;
-  `
-} 
+    color: white;
+  `,
+  TextWrapper: styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    color: white;
+    padding-left: 10px;
+    height: 50px;
+    flex: 4;
+  `,
+};
